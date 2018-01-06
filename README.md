@@ -15,8 +15,10 @@ docker build -t nginx-gunicorn-flask .
 
 ### Usage
 
+Running the container will bind port 80 on your host machine to port 80 on the Docker container. This can be changed if needed but remember to update the configs in the project.
+
 ```bash
-docker run -d -p 80:80 danriti/nginx-gunicorn-flask
+docker run -d -p 80:80 nginx-gunicorn-flask
 ```
 
 After few seconds, open `http://<host>` to see the Flask app.
